@@ -32,6 +32,7 @@
     transform: translate(5px,5px);
     transition: 1s linear;
 }
+
 .percent svg circle:nth-child(1){
     stroke-dashoffset: 0;
     stroke: rgb(24, 1, 29);
