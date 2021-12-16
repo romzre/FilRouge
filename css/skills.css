@@ -1,0 +1,102 @@
+.card_skills{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(13, 19, 34);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+    transition: 1s ease;
+}
+.card_skills:hover{
+   transform: scale(1.08);
+   background-color: rgb(33, 40, 59);;
+   
+}
+.percent , .percent svg, .percent svg circle{
+    position: relative;
+    width: 150px; 
+    background-color: transparent;
+}
+
+
+.percent svg circle{
+    fill: none;
+    stroke-width: 10;
+    stroke: #110a27;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+    transition: 1s linear;
+}
+.percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: rgb(24, 1, 29);
+}
+.percent #percent_html{
+    stroke-dashoffset: calc(440 - (440 * 80 ) / 100);
+    stroke: #ffffff;
+}
+.percent #percent_css{
+    stroke-dashoffset: calc(440 - (440 * 60 ) / 100);
+    stroke: #ffffff;
+}
+.percent #percent_js{
+    stroke-dashoffset: calc(440 - (440 * 45 ) / 100);
+    stroke: #ffffff;
+}
+.percent #percent_php{
+    stroke-dashoffset: calc(440 - (440 * 20 ) / 100);
+    stroke: #ffffff;
+}
+.percent #percent_sys{
+    stroke-dashoffset: calc(440 - (440 * 90 ) / 100);
+    stroke: #ffffff;
+}
+.number{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgba(255, 254, 254, 0.274);
+}
+.number p{
+    font-size: 1.8rem;
+    color: #999;
+    transition: .3s ease-in-out;
+}
+.card_skills:hover .number p{
+    font-size: 2.3rem;
+    color: #ffffff;
+}
+.number span{
+    font-size: 1.1rem;
+}
+.percent + p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1300px){
+    #content_skills{
+        height: 1200px;
+        
+    }
+}
+@media screen and (max-width: 950px){
+    #content_skills{
+        height: 1600px;
+        
+    }
+}
+@media screen and (max-width: 630px){
+    #content_skills{
+        height: 2500px;
+        
+    }
+}

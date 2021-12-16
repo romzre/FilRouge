@@ -1,0 +1,27 @@
+#cont_projects  {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    
+}
+.card_projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    border: 1px solid black;
+    padding: 15px;
+    opacity: 0.2;
+    background: rgb(215,212,226);
+    background: linear-gradient(292deg, rgba(215,212,226,1) 49%, rgba(181,191,201,1) 52%, rgba(243,247,251,1) 59%);
+    transition: .2s linear;
+}
+
+.card_projects:hover{
+    opacity: 1;
+    color: #242425;
+}

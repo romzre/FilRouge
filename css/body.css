@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: consolas;
+    scroll-behavior: smooth;
+}
+li{
+    list-style-type: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background: #1c1c1d;
+
+}
+p{
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 24px;
+}
+
+h2,h3{
+    text-align: center;
+    padding: 15px;
+    
+    
+}
+h2{
+    font-size:2.8rem;
+}
+h3{
+
+    font-size: 1.2rem;
+}
+
+/* Effet curseur grace au pseudo_element before placé à droite avec une animation qui utilise l' opacité pour un effet clignote */
+
+.cnt_type::before{
+    content: "";
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #ffffff;
+    animation: clignote .7s linear infinite;
+}
+
+@keyframes clignote {
+    0%,50%{
+        opacity: 1;
+    }
+    51%,100%{
+        opacity: 0;
+    }
+}
+
+.cnt_type{
+    position: relative;
+    width: 225px;
+    margin: 100px auto ;
+    font-size: 2.0rem;
+    overflow: hidden;
+}
+
+.cnt_type p{
+    position: relative;
+    letter-spacing: 5px;
+    white-space:nowrap;
+}
+
+#anim_type_about{
+    animation: typing 12s steps(10) infinite;
+}
+@keyframes typing {
+    0%,90%,100%{
+        width: 0;
+    }
+    30%,60%{
+       width: 225px;
+    }
+}
+#anim_type_skills{
+    animation: typing_skills 12s steps(13) infinite;
+}
+@keyframes typing_skills  {
+    0%,90%,100%{
+        width: 0;
+    }
+    30%,60%{
+       width: 290px;
+    }
+}
+#anim_type_projects{
+    animation: typing_projects 12s steps(11) infinite;
+}
+@keyframes typing_projects  {
+    0%,90%,100%{
+        width: 0;
+    }
+    30%,60%{
+       width: 270px;
+    }
+}
+#anim_type_contact{
+    animation: typing_contact 12s steps(22) infinite;
+}
+@keyframes typing_contact  {
+    0%,90%,100%{
+        width: 0;
+    }
+    30%,60%{
+       width: 500px;
+    }
+}
+section {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+
+.cont_card {
+    
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    border-radius: 35px;
+    background: #262627;
+    box-shadow:  1px 1px 3px #b4b3b3,
+             -1px -1px 6px #494949;
+}
+.card:hover{
+    
+    box-shadow:  2px 2px 2px #5a5a5a,
+             -2px -2px 2px #ffffff;
+}
